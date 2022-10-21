@@ -24,6 +24,7 @@ function Output(num) {
     function calculate() {
       var displayResult = document.getElementById("result");
       var display = document.getElementById("display");
+      var displaylist = document.getElementById("displaylist");
       // 처음 값이 빈값일경우 
       if (display.value == 0 )
       {
@@ -32,7 +33,10 @@ function Output(num) {
       else {
         var result = eval(display.value);
         displayResult.value = result;
+        displaylist.value = display.value;
+        display.value =result
       }
+      
     }
     // 리셋 버튼 
     function reset() {
@@ -40,6 +44,8 @@ function Output(num) {
     display.value = "";
     var displayResult = document.getElementById("result");
     displayResult.value = "";
+    var displaylist = document.getElementById("displaylist");
+    displaylist.value = "";
     }
     // 삭제 버튼
     function del() {
